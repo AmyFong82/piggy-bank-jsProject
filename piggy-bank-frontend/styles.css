@@ -22,3 +22,17 @@ h2 {
 #activities-container {
 	background-color: #8CD867;
 }
+
+.progress {
+    border-radius: 1rem;
+}
+
+.flipH {
+  transform: scale(-1, 1);
+  color: #1c87c9;
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
