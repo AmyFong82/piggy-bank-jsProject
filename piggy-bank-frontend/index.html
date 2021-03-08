@@ -34,34 +34,59 @@
       <div class="container-fluid">
 
         <div class="row">
-          <div class="col" id="goal-container">
-            <h2 class="text-center">Goal</h2>
+          <div class="col py-3 px-5" id="goal-container">
+            <h2 class="text-left">Goal</h2>
             <div class="row d-flex align-items-end">
-              <div class="col py-3 px-5">
+              <div class="col py-3">
                 <div class="d-flex flex-row-reverse position-relative">
                   <div class="vl"></div>
-                  <div class="goal-flag p-2 position-absolute"><p id="goal-cost">$<span>25</span></p></div>
+                  <div class="goal-flag p-2 position-absolute"><p id="goal-p">$<span id="goal-cost">25</span></p></div>
                 </div>
                 <div class="progress" style="height: 40px;">
                   <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: 5%; font-size: 1.5em;" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100">5%</div>
                   <i class="fas fa-piggy-bank" id="running-piggy" style="font-size: 3.5em; color: #ef2d56;"></i>
                 </div>
               </div>
-              <div class="col">
-                <p>Goal: $<span>25</span></p>
-                <p>Now: $<span>1.25</span></p>
+              <div class="col px-5">
+                <!-- <p>Goal: $<span>25</span> for mother's day gift.</p> -->
+                <p>Saved: $<span>1.25</span></p>
                 <p>$<span>24.75</span> more to reach goal.</p>
               </div>
+
+              <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label for="goalAmount" class="col-form-label"><strong>Goal:</strong></label>
+                </div>
+                <div class="col-auto">
+                  <span>
+                    $
+                  </span>
+                </div>
+                <div class="col-auto">
+                  <input type="number" id="goalAmount" class="form-control" name="goalAmount">
+                </div>
+                <div class="col-auto">
+                  <span>
+                    for
+                  </span>
+                </div>
+                <div class="col-auto">
+                  <input type="text" id="goalReason" class="form-control" name="goalReason">
+                </div>
+              </div>
+
             </div>
 
           </div>
         </div>
 
         <div class="row">
-          <div class="col" id="activities-container">
-            <h2 class="text-center">Activities</h2>
+          <div class="col py-3 px-5" id="activities-container">
+            <h2 class="text-left">Activities</h2>
           </div>
         </div>
+
+
 
       </div>
     </main>

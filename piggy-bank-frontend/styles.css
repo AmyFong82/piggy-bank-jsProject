@@ -45,7 +45,7 @@ h2 {
 	top: -70px;
 }
 
-#goal-cost {
+#goal-p {
 	margin-bottom: 0px;
 	color: white;
 	font-size: 1.5rem;
@@ -66,4 +66,11 @@ h2 {
 
 #running-piggy {
   animation: piggy-rocking 2s ease-in infinite;
+}
+
+.currencyinput {
+    border: 1px solid #ced4da;
+}
+.currencyinput input {
+    border: 0;
 }
