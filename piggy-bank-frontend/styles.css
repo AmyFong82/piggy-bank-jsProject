@@ -35,7 +35,7 @@ h2 {
   border-left: 6px solid green;
   height: 75px;
   position: absolute;
-  bottom: -10px;
+  bottom: -18px;
 }
 
 .goal-flag {
@@ -50,4 +50,20 @@ h2 {
 	color: white;
 	font-size: 1.5rem;
 	font-family: 'RocknRoll One', sans-serif;
+}
+
+@keyframes piggy-rocking {
+  0% {
+    transform: rotate(-0.005turn);
+  }
+  50% {
+    transform: rotate(-0.02turn);
+  }
+  100% {
+    transform: rotate(-0.005turn);
+  }
+}
+
+#running-piggy {
+  animation: piggy-rocking 2s ease-in infinite;
 }
