@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-    skip_before_action :verify_authenticity_token, only: :create
+    # skip_before_action :verify_authenticity_token, only: :create
 
   # def new
   # end
@@ -11,13 +11,13 @@ class SessionsController < ApplicationController
         if user.authenticate(params[:password])
           session[:user_id] = user.id
           redirect_to user_path(user)
-        else
-          flash[:alert] = "Password incorrect."
-          redirect_to '/login'
+        # else
+        #   flash[:alert] = "Password incorrect."
+        #   redirect_to '/login'
         end
-      else
-        flash[:alert] = "This username is not registered."
-        redirect_to '/login'
+      # else
+      #   flash[:alert] = "This username is not registered."
+      #   redirect_to '/login'
       end
     end
   end
