@@ -1,14 +1,14 @@
 class SessionsController < ApplicationController
     skip_before_action :verify_authenticity_token, only: :create
 
-  def new
-  end
+  # def new
+  # end
 
   def create
-    if params[:user][:username];
-      user = User.find_by(username: params[:user][:username])
+    if params[:username];
+      user = User.find_by(username: params[:username])
       if user
-        if user.authenticate(params[:user][:password])
+        if user.authenticate(params[:password])
           session[:user_id] = user.id
           redirect_to user_path(user)
         else

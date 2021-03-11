@@ -10,3 +10,4 @@ User.delete_all
 Activity.delete_all
 
 User.create(username: "User1", password: "1", balance: 0)
+
