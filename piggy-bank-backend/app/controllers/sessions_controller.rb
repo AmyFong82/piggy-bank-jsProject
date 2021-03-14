@@ -5,12 +5,12 @@ class SessionsController < ApplicationController
   # end
 
   def create
-    if params[:username];
+    # if params[:username];
       user = User.find_by(username: params[:username])
       if user
         if user.authenticate(params[:password])
-          session[:user_id] = user.id
-          redirect_to user_path(user)
+          session = {"user_id" => user.id}
+          redirect_to user
         # else
         #   flash[:alert] = "Password incorrect."
         #   redirect_to '/login'
@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
       #   flash[:alert] = "This username is not registered."
       #   redirect_to '/login'
       end
-    end
+    # end
   end
 
   def destroy

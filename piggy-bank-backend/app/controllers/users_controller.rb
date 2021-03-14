@@ -10,7 +10,8 @@ class UsersController < ApplicationController
 
 	def show
 		# if current_user == User.find(params[:id])
-			user = User.find(params[:id])
+			# byebug
+			user = User.find_by(params[:id])
 			render json: UserSerializer.new(user).to_serialized_json
 		# end
 	end
