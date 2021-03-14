@@ -6,6 +6,5 @@ Rails.application.routes.draw do
 
   get '/users/:id' => 'users#show'
 
-  post '/login' =>  'sessions#create'
-  
+  post '/login' => 'sessions#create'  
 end
