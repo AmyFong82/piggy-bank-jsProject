@@ -19,17 +19,20 @@ function loginUser(){
 				},
 		body: JSON.stringify(data)
 	})
-	.then(response => response.json())
-	.then(session => function(){
-		sessionStorage.setItem("amyKey", "amyValue");
+	.then(response => {
+    	localStorage.setItem("user", JSON.stringify(response));
 	})
 
-	// fetch(USERS_URL)
+	// fetch(USERS_URL+'/1', {
+	// 	headers: {"X-CSRF-Token": getCookie("CSRF-TOKEN")}
+	// })
+	// fetch("http://localhost:3000/users/1")
+	// .then(response => response.json())
 	// .then(user => {
 	// 	const p = document.createElement("p")
-	// 	p.innerHTML = `${user.username}`
+	// 	p.innerHTML = user.username
 	// 	const appName = document.querySelector("#appname")
-	// 	appName.append(currentUser)        
+	// 	appName.append(p)        
  //    });
 }
 
