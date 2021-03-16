@@ -11,7 +11,8 @@ function loginUser(){
 	const username = document.querySelector("#username").value
 	const password = document.querySelector("#password").value
 	const data = {username: username, password: password}
-	fetch(BASE_URL+'/login', {
+	// fetch(BASE_URL+'/login', {
+	fetch("http://localhost:3000/login", {
 		method: 'POST',
 		headers: {
 				"Content-Type": "application/json",
@@ -20,11 +21,21 @@ function loginUser(){
 		body: JSON.stringify(data)
 	})
 	.then(response => {
-    	localStorage.setItem("user", JSON.stringify(response));
-	})
+	    localStorage.setItem("loggedIn", true);
+	  })
 
-	// fetch(USERS_URL+'/1', {
+	// fetch('http://localhost:3000/users/1', {
+	// 	credentials: 'include'
+	// })
+ //  .then(response => response.json())
+ //  .then(data => console.log(data));
+
+	// fetch("http://localhost:3000/users/1", {
 	// 	headers: {"X-CSRF-Token": getCookie("CSRF-TOKEN")}
+	// })
+	// .then(res => res.json())
+	// .then(response => {
+ //    	localStorage.setItem("loggedIn", true);
 	// })
 	// fetch("http://localhost:3000/users/1")
 	// .then(response => response.json())

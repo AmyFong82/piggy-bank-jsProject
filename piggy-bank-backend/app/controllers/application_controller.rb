@@ -9,20 +9,6 @@ class ApplicationController < ActionController::API
   # protect_from_forgery :exception
 
 
-  def logged_in?
-  	session[:user_id]
-  end
-
-  def current_user
-    if logged_in?
-  	 User.find(session[:user_id])
-    end
-  end
-
-	def require_login
-		redirect_to '/login' unless current_user
-	end
-
   private
 
   def set_csrf_cookie

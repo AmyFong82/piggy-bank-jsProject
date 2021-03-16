@@ -10,8 +10,7 @@ class SessionsController < ApplicationController
       if user
         if user.authenticate(params[:password])
           session[:user_id] = user.id
-          render json: UserSerializer.new(user).to_serialized_json
-          # redirect_to user
+          # redirect_to user => cookie might not work if not redirected
         # else
         #   flash[:alert] = "Password incorrect."
         #   redirect_to '/login'
